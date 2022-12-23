@@ -1,4 +1,4 @@
-#Data Scientist Role Play: Profiling and Analyzing the Yelp Dataset Coursera Worksheet
+Data Scientist Role Play: Profiling and Analyzing the Yelp Dataset Coursera Worksheet
 
 This is a 2-part assignment. In the first part, you are asked a series of questions that will help you profile and understand the data just like a data scientist would. For this first part of the assignment, you will be assessed both on the correctness of your findings, as well as the code you used to arrive at your answer. You will be graded on how easy your code is to read, so remember to use proper formatting and comments where necessary.
 
@@ -30,16 +30,16 @@ xi. user table =10000
 2. Find the total distinct records by either the foreign key or primary key for each table. If two foreign keys are listed in the table, please specify which foreign key.
 
 i. Business =10000
-ii. Hours =10000
-iii. Category =10000
-iv. Attribute =10000
+ii. Hours =1562
+iii. Category =2643
+iv. Attribute =1115
 v. Review = 10000
-vi. Checkin = 10000
+vi. Checkin = 493
 vii. Photo =10000
-viii. Tip = 10000
+viii. Tip = 537
 ix. User = 10000
-x. Friend = 10000
-xi. Elite_years =10000
+x. Friend = 11
+xi. Elite_years =2780
 
 Note: Primary Keys are denoted in the ER-Diagram with a yellow key icon.	
 
@@ -133,26 +133,47 @@ i. Avon
 
 SQL code used to arrive at answer:
 
+select stars, review_count
+from business
+where city = 'Avon'
+group by stars
+order by stars desc;
 
 Copy and Paste the Resulting Table Below (2 columns 鈥  star rating and count):
 
++-------+--------------+
+| stars | review_count |
++-------+--------------+
+|   5.0 |            3 |
+|   4.5 |           31 |
+|   4.0 |           17 |
+|   3.5 |           50 |
+|   2.5 |            3 |
+|   1.5 |           10 |
++-------+--------------+
 
 ii. Beachwood
 
 SQL code used to arrive at answer:
 
-select business.id, business.city, review.stars, count()
-from business inner join review on business.id = review.id
-where business.city = "Avon"
-group by business.city
-order by business.city;
+select stars, review_count
+from business
+where city = 'Beachwood'
+group by stars
+order by stars desc;
 
 Copy and Paste the Resulting Table Below (2 columns 鈥  star rating and count):
-+----+------+-------+---------+
-| id | city | stars | count() |
-+----+------+-------+---------+
-+----+------+-------+---------+
-(Zero rows)	
++-------+--------------+
+| stars | review_count |
++-------+--------------+
+|   5.0 |            4 |
+|   4.5 |            3 |
+|   4.0 |           69 |
+|   3.5 |            3 |
+|   3.0 |            3 |
+|   2.5 |            3 |
+|   2.0 |            8 |
++-------+--------------+
 
 
 7. Find the top 3 users based on their total number of reviews:
@@ -219,11 +240,19 @@ Result:
 	
 9. Are there more reviews with the word "love" or with the word "hate" in them?
 
-	Answer:
+	Answer: Yes
 
 	
 	SQL code used to arrive at answer:
+select
+count (*) AS Hate
+from review
+where text like '%hate%';
 
+select
+count (*) AS Love
+from review
+where text like '%love%';
 	
 	
 10. Find the top 10 users with the most fans:

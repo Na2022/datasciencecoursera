@@ -287,28 +287,48 @@ Part 2: Inferences and Analysis
 1. Pick one city and category of your choice and group the businesses in that city or category by their overall star rating. Compare the businesses with 2-3 stars to the businesses with 4-5 stars and answer the following questions. Include your code.
 	
 i. Do the two groups you chose to analyze have a different distribution of hours?
-
+No
 
 ii. Do the two groups you chose to analyze have a different number of reviews?
-         
+Yes       
          
 iii. Are you able to infer anything from the location data provided between these two groups? Explain.
+No because Eastside has both 4-5 star business and 2-3 star ones.
 
 SQL code used for analysis:
 
-		
++-------------------+-------+---------------+--------------+--------------+
+| hours             | stars | category      | review_count | neighborhood |
++-------------------+-------+---------------+--------------+--------------+
+| Monday|9:00-17:30 |   5.0 | Doctors       |            5 | Anthem       |
+| Monday|9:00-17:30 |   4.5 | Japanese      |            3 | Eastside     |
+| Monday|9:00-17:30 |   4.0 | Gluten-Free   |          168 | Summerlin    |
+| Monday|9:00-17:30 |   3.5 | Bars          |          105 | Southwest    |
+| Monday|9:00-17:30 |   3.0 | Restaurants   |          123 |              |
+| Monday|9:00-17:30 |   2.5 | Beauty & Spas |            6 | Eastside     |
++-------------------+-------+---------------+--------------+--------------+
+	
 		
 2. Group business based on the ones that are open and the ones that are closed. What differences can you find between the ones that are still open and the ones that are closed? List at least two differences and the SQL code you used to arrive at your answer.
 		
 i. Difference 1:
-         
+Those still open have longer hours      
          
 ii. Difference 2:
-         
+Those still open have more reviews
          
          
 SQL code used for analysis:
-
+select business.name
+, business.is_open
+, category.category
+, business.stars
+, hours.hours
+, business.review_count
+, business.postal_code
+from (business inner join category on business.id = category.business_id) inner join hours on hours.business_id = category.business_id
+where business.city = 'Las Vegas' 
+ group by business.is_open;
 	
 	
 3. For this last part of your analysis, you are going to choose the type of analysis you want to conduct on the Yelp dataset and are going to prepare the data for analysis.
@@ -316,12 +336,45 @@ SQL code used for analysis:
 Ideas for analysis include: Parsing out keywords and business attributes for sentiment analysis, clustering businesses to find commonalities or anomalies between them, predicting the overall star rating for a business, predicting the number of fans a user will have, and so on. These are just a few examples to get you started, so feel free to be creative and come up with your own problem you want to solve. Provide answers, in-line, to all of the following:
 	
 i. Indicate the type of analysis you chose to do:
-         
+Wheter business in certain cities have more funny reviews  
          
 ii. Write 1-2 brief paragraphs on the type of data you will need for your analysis and why you chose that data:
-                           
+I will need 2 tables: review & business. From review, I would get data about funny reviews and from business the cities of business                        
                   
 iii. Output of your finished dataset:
-         
++-------+------------------+
+| funny | city             |
++-------+------------------+
+|     7 | Woodmere Village |
+|     5 | Strongsville     |
+|     4 | North Las Vegas  |
+|     2 | Boulder City     |
+|     1 | Chandler         |
+|     1 | Mississauga      |
+|     1 | Parma            |
+|     1 | Richmond Hill    |
+|     1 | Stow             |
+|     1 | Twinsburg        |
+|     0 | Ahwatukee        |
+|     0 | Ajax             |
+|     0 | Allison Park     |
+|     0 | Aurora           |
+|     0 | Avondale         |
+|     0 | Beachwood        |
+|     0 | Berea            |
+|     0 | Brampton         |
+|     0 | Burton           |
+|     0 | Cave Creek       |
+|     0 | Champaign        |
+|     0 | Charlotte        |
+|     0 | Cleveland        |
+|     0 | Concord          |
+|     0 | Cornelius        |
++-------+------------------+
+(Output limit exceeded, 25 of 67 total rows shown)         
          
 iv. Provide the SQL code you used to create your final dataset:
+select review.funny, business.city
+from review inner join business on business.id = review.business_id
+group by business.city
+order by funny desc;

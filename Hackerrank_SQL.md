@@ -46,12 +46,12 @@ The STATION table is described as follows:
 
 where LAT_N is the northern latitude and LONG_W is the western longitude.
 
-···
+```
 select truncate(cast(LONG_W AS decimal(18,4)),4)
 FROM STATION
 where LAT_N =
 (SELECT max(LAT_N) 
 from STATION
 where LAT_N < 137.2345);
-···
+```
 为什么结果不对呢……

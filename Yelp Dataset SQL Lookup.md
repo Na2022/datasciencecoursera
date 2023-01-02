@@ -51,11 +51,11 @@ Note: Primary Keys are denoted in the ER-Diagram with a yellow key icon.
 	NO
 	
 	SQL code used to arrive at answer:
-
+```
 select COUNT(*)
 from user
 where id = NULL;
-	
+```	
 
 	
 4. For each table and column listed below, display the smallest (minimum), largest (maximum), and average (mean) value for the following fields:
@@ -89,11 +89,11 @@ where id = NULL;
 5. List the cities with the most reviews in descending order:
 
 	SQL code used to arrive at answer:
-
+```
 select city, review_count
 from business
 order by review_count desc;
-	
+```	
 	Copy and Paste the Result Below:
 +------------+--------------+
 | city       | review_count |
@@ -132,13 +132,13 @@ order by review_count desc;
 i. Avon
 
 SQL code used to arrive at answer:
-
+```
 select stars, review_count
 from business
 where city = 'Avon'
 group by stars
 order by stars desc;
-
+```
 Copy and Paste the Resulting Table Below (2 columns 鈥  star rating and count):
 
 +-------+--------------+
@@ -155,13 +155,13 @@ Copy and Paste the Resulting Table Below (2 columns 鈥  star rating and count):
 ii. Beachwood
 
 SQL code used to arrive at answer:
-
+```
 select stars, review_count
 from business
 where city = 'Beachwood'
 group by stars
 order by stars desc;
-
+```
 Copy and Paste the Resulting Table Below (2 columns 鈥  star rating and count):
 +-------+--------------+
 | stars | review_count |
@@ -179,12 +179,12 @@ Copy and Paste the Resulting Table Below (2 columns 鈥  star rating and count):
 7. Find the top 3 users based on their total number of reviews:
 		
 	SQL code used to arrive at answer:
-	
+```	
 select id, review_count
 from user
 order by review_count desc
 limit 3;
-		
+```		
 	Copy and Paste the Result Below:
 		
 +------------------------+--------------+
@@ -201,11 +201,11 @@ No.
 Explanation:
 With top counts of reviews, they have more of fewer fans, not trend observed.
 
-Code: 
+```
 select id, review_count, fans
 from user
 order by review_count desc, fans desc;
-
+```
 Result:
 +------------------------+--------------+------+
 | id                     | review_count | fans |
@@ -244,6 +244,7 @@ Result:
 
 	
 	SQL code used to arrive at answer:
+```
 select
 count (*) AS Hate
 from review
@@ -253,7 +254,7 @@ select
 count (*) AS Love
 from review
 where text like '%love%';
-	
+```	
 	
 10. Find the top 10 users with the most fans:
 
@@ -319,6 +320,7 @@ Those still open have more reviews
          
          
 SQL code used for analysis:
+```
 select business.name
 , business.is_open
 , category.category
@@ -329,7 +331,7 @@ select business.name
 from (business inner join category on business.id = category.business_id) inner join hours on hours.business_id = category.business_id
 where business.city = 'Las Vegas' 
  group by business.is_open;
-	
+ ```
 	
 3. For this last part of your analysis, you are going to choose the type of analysis you want to conduct on the Yelp dataset and are going to prepare the data for analysis.
 
@@ -374,7 +376,9 @@ iii. Output of your finished dataset:
 (Output limit exceeded, 25 of 67 total rows shown)         
          
 iv. Provide the SQL code you used to create your final dataset:
+```
 select review.funny, business.city
 from review inner join business on business.id = review.business_id
 group by business.city
 order by funny desc;
+```

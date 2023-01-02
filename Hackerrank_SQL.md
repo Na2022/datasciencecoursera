@@ -16,8 +16,10 @@ where LAT_N is the northern latitude and LONG_W is the western longitude.
 
 My answer:
 ```
-select truncate(sum(LAT_N),4)
+select truncate(cast(sum(LAT_N) AS decimal(18,4)),4)
 FROM STATION
 where LAT_N BETWEEN 38.7880 AND 137.2345;
 ```
 为什么这里用truncate和round最后出来都是8位小数呢 T-T
+
+问题解决了，但我不理解为什么4需要出现2次，以及18的作用是啥？

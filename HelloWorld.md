@@ -1,1 +1,5 @@
-## This is a markdown file
+##read a line
+
+```
+scanf("%[^\n]%*c",sen);
+```

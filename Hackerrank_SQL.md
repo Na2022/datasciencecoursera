@@ -1,5 +1,4 @@
-
-#Weather Observation Station 13
+## Weather Observation Station 13
 
 Query the sum of Northern Latitudes (LAT_N) from STATION having values greater than  and less than . Truncate your answer to  decimal places.
 Input Format
@@ -28,7 +27,7 @@ where LAT_N BETWEEN 38.7880 AND 137.2345;
 问题解决了，但我不理解为什么4需要出现2次，以及18的作用是啥？
 
 
-#Weather Observation Station 15
+## Weather Observation Station 15
 
 Query the Western Longitude (LONG_W) for the largest Northern Latitude (LAT_N) in STATION that is less than . Round your answer to  decimal places.
 

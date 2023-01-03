@@ -1,4 +1,4 @@
-##read a line
+## Read a line from input
 
 ```
 scanf("%[^\n]%*c",sen);

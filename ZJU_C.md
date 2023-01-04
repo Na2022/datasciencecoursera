@@ -1,3 +1,4 @@
+```
 #include <stdio.h>
 
 int main()
@@ -18,3 +19,4 @@ int main()
     }
     printf("时间差为%d小时%d分钟",ih,im);
 }
+```

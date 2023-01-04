@@ -1,3 +1,4 @@
+#时差计算器
 ```
 #include <stdio.h>
 
@@ -20,3 +21,10 @@ int main()
     printf("时间差为%d小时%d分钟",ih,im);
 }
 ```
+
+#找零计算器
+···
+#include <stdio.h>
+
+int main()
+···

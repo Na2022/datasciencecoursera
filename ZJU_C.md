@@ -26,4 +26,25 @@ int main()
 ```
 #include <stdio.h>
 int main()
+{
+    int price, pay;
+    printf("请输入账单金额：");
+    scanf("%d",&price);
+    printf("请输入支付金额：");
+    scanf("%d",&pay);
+    int change = pay - price;
+    if(change>=0)
+    {
+    printf("找您%d",change);
+    }
+    else printf("您仍需支付%d",-change);
+}
+```
+
+#运算符的优先级
+```
+5>3==6>4
+//5>3和6>4均为真，==两边值均为1
+6>5>4
+//先计算6?5为真
 ```

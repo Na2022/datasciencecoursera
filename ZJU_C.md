@@ -57,7 +57,6 @@ a==b>0
 #一个数字有几位
 ```
 #include <stdio.h>
-
 int main()
 {
     int x;

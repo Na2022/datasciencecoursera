@@ -73,3 +73,20 @@ int main()
     printf("这是一个%d位数",n);
 }
 ```
+或者 
+```
+#include <stdio.h>
+
+int main()
+{
+    int x;
+    scanf("%d",&x);
+    int n = 0;
+    do
+    {
+        n++;
+        x /= 10;
+    }while(x>0);
+    printf("这是一个%d位数",n);
+}
+```

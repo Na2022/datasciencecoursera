@@ -115,3 +115,22 @@ int main()
     return 0;
 }
 ```
+#输出一个数字的阶乘
+```
+#include <stdio.h>
+
+int main()
+{
+    int x,fact = 1,i=0;
+    printf("enter an integer:");
+    scanf("%d",&x);
+    for(i=1;i<=x;i++)
+    {
+        fact *=i;
+    }
+    
+    printf("The fact is %d",fact);
+    
+    return 0;
+}
+```

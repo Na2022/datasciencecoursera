@@ -121,7 +121,7 @@ int main()
 
 int main()
 {
-    int x,fact = 1,i=0;
+    int x,fact = 1,i;
     printf("enter an integer:");
     scanf("%d",&x);
     for(i=1;i<=x;i++)

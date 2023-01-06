@@ -121,16 +121,16 @@ int main()
 
 int main()
 {
-    int x,fact = 1,i;
+    int x,fact = 1;
     printf("enter an integer:");
     scanf("%d",&x);
-    for(i=2;i<=x;i++)
-    /*从2开始循环不影响0和1阶乘数值，且可以提高效率*/
+    int original =x;
+    for(;x>1;x--)
     {
-        fact *=i;
+        fact *=x;
     }
     
-    printf("The fact is %d",fact);
+    printf("The factor of %d is %d",original,fact);
     
     return 0;
 }

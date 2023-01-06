@@ -124,7 +124,8 @@ int main()
     int x,fact = 1,i;
     printf("enter an integer:");
     scanf("%d",&x);
-    for(i=1;i<=x;i++)
+    for(i=2;i<=x;i++)
+    /*从2开始循环不影响0和1阶乘数值，且可以提高效率*/
     {
         fact *=i;
     }

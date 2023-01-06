@@ -90,3 +90,28 @@ int main()
     printf("这是一个%d位数",n);
 }
 ```
+
+#逆序输出一个数字 
+```
+#include <stdio.h>
+
+int main()
+{
+    int x, rev = 0;
+    printf("enter an integer:");
+    scanf("%d",&x);
+    
+    do
+    { 
+        int digit;
+        digit = x%10;
+        rev = rev*10+digit;
+        x /= 10;
+        
+    }while(x>0);
+    
+    printf("The reverse is %d",rev);
+    
+    return 0;
+}
+```

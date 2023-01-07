@@ -176,6 +176,7 @@ int main()
     for(x=1;x<=100;x++)
     {
       int i, Prime = 1;
+      /*这里i和Prime的定义要放在x的循环之内*/
       for(i=2;i<=x/2;i++)
       {
         if(x%i == 0)

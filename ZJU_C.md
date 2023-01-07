@@ -163,3 +163,31 @@ int main()
 }
 
 ```
+
+#输出100以内的质数
+```
+#include <stdio.h>
+
+int main()
+{
+    int x;
+
+    
+    for(x=1;x<=100;x++)
+    {
+      int i, Prime = 1;
+      for(i=2;i<=x/2;i++)
+      {
+        if(x%i == 0)
+        {
+            Prime = 0;
+            break;
+        }
+      }
+      if(Prime == 1) {printf("%d is a prime number.\n",x);}
+    }
+    
+
+    return 0;
+}
+```

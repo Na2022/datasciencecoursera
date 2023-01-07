@@ -135,3 +135,27 @@ int main()
     return 0;
 }
 ```
+
+#判断一个正整数是否为质数
+```
+#inc#include <stdio.h>
+
+int main()
+{
+    printf("Input an integer:");
+    int x;
+    scanf("%d",&x);
+    int i, Prime = 1;
+    for(i=2;i<=x/2;i++)
+/*这里如果是i<x/2，就会把4误判为质数*/
+    {
+        if(x%i == 0)
+            Prime = 0;
+    }
+    if(Prime == 1) {printf("This is a prime number.");}
+    else printf("This is not a prime number.");
+    
+
+    return 0;
+}
+```

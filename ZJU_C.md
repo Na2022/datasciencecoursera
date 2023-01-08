@@ -192,3 +192,31 @@ int main()
     return 0;
 }
 ```
+#用1角2角5角硬币凑整
+为什么出来的数字不对呢……
+```
+#include <stdio.h>
+
+int main()
+{
+    int one=0, two=0, five=0, x;
+    printf("Please enter an integer:\n");
+    scanf("%d",&x);
+    for(one=1;one<x*10;one++)
+    {
+        for(two=1;two<10*x/2;two++)
+        {
+            for(five=1;five<10*x/5;five++)
+            {
+                if(5*five+2*two+one == 10*x)
+                {
+                    printf("%d 10-cent coins, %d 20-cent and %d 50-cent would make %d dollars.\n",one,two,five,x);
+                    goto out;
+                }
+            }
+        }
+    }
+    out:
+    return 0;
+}
+```

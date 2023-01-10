@@ -220,7 +220,30 @@ int main()
     return 0;
 }
 ```
-#逆序输出一个正整数的每一位
+#正序输出一个正整数的每一位
 ```
+int main()
+{
+    int x;
+    printf("Please input an integer:");
+    scanf("%d",&x);
+    int t = x, mask = 1, count=0, d;
+    while(t>9)
+    {
+        t /= 10;
+        count ++;
+        mask *= 10;
+        printf("t = %d \ncount = %d \nmask = %d\n",t,count,mask);
+    }
 
+    do
+    {
+        d = x/mask;
+        printf("%d",d);
+        if(mask>9) printf(" ");
+        x %= mask;
+        mask /= 10;
+    }while(mask>0);
+    printf("\n");
+}
 ```

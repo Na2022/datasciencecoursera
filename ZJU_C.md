@@ -287,4 +287,24 @@ int main()
     return 0;
 }
 ```
+#Input an integer, output the sum of 2/1+3/2+5/3+8/5+...
+```
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    double sum=0.0, dividend = 2.0, divisor = 1.0,temp = 0.0;
+    int i,n;
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        sum+= dividend/divisor;
+        temp = dividend,
+        dividend += divisor;
+        divisor = temp;
+        printf("%f/%f\n",dividend,divisor);
+    }
+    printf("%.2f\n",sum);
+}
 
+```

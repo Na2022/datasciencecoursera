@@ -269,3 +269,22 @@ int main()
 }
 ```
 
+#a and n are two integers, a∈[0,9],n∈[1,8], output sum = a + aa + aaa ......+ aaaaaa(n of a).
+```
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int n, a,i=0,sum=0,temp=0;
+    printf("Please enter 2 integers:");
+    scanf("%d %d",&n,&a);
+    for(i=0;i<n;i++)
+    {
+        temp+=a*pow(10,i);
+        sum += temp;
+    }
+    printf("Sum=%d",sum);
+    return 0;
+}
+```
+

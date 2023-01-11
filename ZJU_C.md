@@ -247,3 +247,25 @@ int main()
     printf("\n");
 }
 ```
+
+#The greatest common divisor
+```
+#include <stdio.h>
+
+int main()
+{
+    int a, b, t1,t2,t;
+    printf("Please enter 2 integers:");
+    scanf("%d %d",&a,&b);
+    t1=a,t2=b;
+    while(t2>0)
+    {
+        t = t1%t2;
+        t1 = t2;
+        t2 = t;
+    };
+    printf("The greatest common divisor of %d and %d is %d",a,b,t1);
+    return 0;
+}
+```
+

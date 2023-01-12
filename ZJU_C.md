@@ -374,7 +374,7 @@ int main()
     }
 }
 ```
-#输出完整的三角九九乘法表
+#给定一个正整数N，输出从1*1到N*N完整的三角九九乘法表
 ```#include <stdio.h>
 #include <math.h>
 

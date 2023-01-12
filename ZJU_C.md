@@ -374,3 +374,23 @@ int main()
     }
 }
 ```
+#输出完整的三角九九乘法表
+```#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int N;
+    scanf("%d",&N);
+    int i,j;
+    for(j=1;j<=N;j++)
+    {
+        for(i=1;i<=j;i++)
+        {
+            printf("%d*%d=%d",i,j,i*j);
+            if(i==j) printf("\n");
+            else printf(" ");
+        }
+    }
+}
+```

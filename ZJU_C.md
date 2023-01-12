@@ -308,3 +308,44 @@ int main()
 }
 
 ```
+#给定不超过6的正整数A，考虑从A开始的连续4个数字，请输出所有由他们组成的无重复数字的3位数。
+```
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    int i,j,k,count = 0;
+    i=a;
+    while(i<=a+3)
+    {
+        j=a;
+        while(j<=a+3)
+        {
+            k=a;
+            while(k<=a+3)
+            {
+                if(i!=j && j!=k && i!=k)
+                {
+                    count ++;
+                    printf("%d%d%d",i,j,k);
+                    if(count == 6)
+                    {
+                        printf("\n");
+                        count =0;
+                    }
+                    else 
+                    {
+                        printf(" ");
+                    }
+                
+                }
+                k++;
+            }
+            j++;
+        }
+        i++;
+    }
+}
+```

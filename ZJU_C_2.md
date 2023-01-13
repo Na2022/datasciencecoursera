@@ -1,4 +1,5 @@
 ***data type, Logic, conditions, etc.***
+
 #各数据类型的大小
 ```
 #include <stdio.h>

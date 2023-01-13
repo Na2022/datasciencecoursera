@@ -394,3 +394,21 @@ int main()
     }
 }
 ```
+#在一行中给出一个分数，分子和分母中间以/分隔，在下一行输出这个分数对应的极简式，格式同上。
+```#include <stdio.h>
+
+int main()
+{
+    int dividend, divisor,temp,a,b;
+    scanf("%d/%d",&dividend,&divisor);
+    a= dividend,b=divisor;
+    do{
+        temp = dividend%divisor;
+        dividend = divisor;
+        divisor = temp;
+    }while(temp!=0);
+    printf("%d/%d\n",a/dividend,b/dividend);
+    
+}
+```
+

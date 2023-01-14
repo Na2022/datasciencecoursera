@@ -30,6 +30,7 @@ int main()
 }
 
 //
+scanf只能处理int类型数据，不能处理char
 1
 c=49
 c=1

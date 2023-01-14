@@ -15,3 +15,30 @@ int main()
     return 0;
 }
 ```
+#输入输出字符
+```
+#include <stdio.h>
+
+int main()
+{
+    char c;
+    scanf("%c",&c);
+    printf("c=%d\n",c);
+    printf("c=%c\n",c);
+
+    return 0;
+}
+
+//
+1
+c=49
+c=1
+
+z
+c=122
+c=z
+
+'
+c=39
+c='
+```

@@ -55,3 +55,29 @@ int main()
 }
 //c+1=n
 ```
+**整数的输入输出
+
+只有2种形式：int 或者long long
+
+%d: int
+
+%u: unsigned
+
+%ld: long long
+
+%lu: unsigned long long
+
+```
+#include <stdio.h>
+
+int main()
+{
+    int a = 12, b = 012, c = 0x12;
+    printf("%d %o %x\n",a,b,c);
+    printf("%d %d %d\n",a,b,c);
+    
+}
+//
+12 12 12
+12 10 18
+```

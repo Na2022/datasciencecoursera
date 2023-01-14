@@ -43,3 +43,15 @@ c=z
 c=39
 c='
 ```
+```
+#include <stdio.h>
+
+int main()
+{
+    char c = 'm';
+    printf("%c\n",c+1);
+
+    return 0;
+}
+//c+1=n
+```

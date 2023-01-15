@@ -114,3 +114,44 @@ int main()
     sum(1,1000);
 }
 ```
+
+#无返回的函数
+```
+#include <stdio.h>
+void cheers()
+{
+    printf("Cheers!");
+}
+
+int main()
+{
+    cheers();
+}
+```
+#有返回数值的函数
+
+***为什么main没有输出呢。。。***
+
+```
+#include <stdio.h>
+int isPrime(int x)
+{
+    int i,isPrime=1;
+    for(i=2;i<x;i++)
+    {
+        if(x%i==0)
+        {
+            isPrime = 0;
+            break;
+        }
+    }
+    return isPrime;
+}
+
+int main()
+{
+   isPrime(1);
+   isPrime(2);
+   isPrime(3);
+}
+```

@@ -81,3 +81,36 @@ int main()
 12 12 12
 12 10 18
 ```
+
+#Bool data taype
+```
+#include <stdio.h>
+#include <stdbool.h>
+
+int main()
+{
+    bool b = 6 > 5;
+    printf("%d",b);
+}
+```
+
+#求和函数
+```
+#include <stdio.h>
+void sum(int begin, int end)
+{
+    int i, sum = 0;
+    for(i=begin;i<=end;i++)
+    {
+        sum += i;
+    }
+    printf("%d\n",sum);
+}
+
+int main()
+{
+    sum(1,50);
+    sum(1,100);
+    sum(1,1000);
+}
+```

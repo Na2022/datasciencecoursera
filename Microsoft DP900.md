@@ -43,12 +43,23 @@ Azure File Storage offers two performance tiers. The Standard tier uses hard dis
 
 ### Azure Files 
 
-supports two common network file sharing protocols:
+#### supports two common network file sharing protocols:
 
-#### Server Message Block (SMB) file sharing 
+##### Server Message Block (SMB) file sharing 
 
 commonly used across multiple operating systems (Windows, Linux, macOS).
 
-#### Network File System (NFS) shares 
+##### Network File System (NFS) shares 
 
 used by some Linux and macOS versions. To create an NFS share, you must use a premium tier storage account and create and configure a virtual network through which access to the share can be controlled.
+
+#### Azure File Storage offers two performance tiers. 
+
+##### The Standard tier 
+
+uses hard disk-based hardware in a datacenter
+
+##### the Premium tier 
+
+uses solid-state disks
+offers greater throughput, but is charged at a higher rate.

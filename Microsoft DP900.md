@@ -71,9 +71,29 @@ Each item is represented by a row that contains columns for the data fields that
 
 ### Batch and stream processing
 
-### Azure Stream Analytics
+### Real-time analytics in Azure
+Microsoft Azure supports multiple technologies that you can use to implement real-time analytics of streaming data, including:
+
+##### Azure Stream Analytics: 
+A platform-as-a-service (PaaS) solution that you can use to define streaming jobs that ingest data from a streaming source, apply a perpetual query, and write the results to an output.
+
+##### Spark Structured Streaming: 
+An open-source library that enables you to develop complex streaming solutions on Apache Spark based services, including Azure Synapse Analytics, Azure Databricks, and Azure HDInsight.
+
+##### Azure Data Explorer: A high-performance database and analytics service that is optimized for ingesting and querying batch or streaming data with a time-series element, and which can be used as a standalone Azure service or as an Azure Synapse Data Explorer runtime in an Azure Synapse Analytics workspace.
 
 ### Spark Structured Streaming on Azure
 
-### Azure Synapse Data Explorer
+#### Sources for stream processing
 
+##### Azure Event Hubs: 
+A data ingestion service that you can use to manage queues of event data, ensuring that each event is processed in order, exactly once.
+
+##### Azure IoT Hub: 
+A data ingestion service that is similar to Azure Event Hubs, but which is optimized for managing event data from Internet-of-things (IoT) devices.
+
+##### Azure Data Lake Store Gen 2: 
+A highly scalable storage service that is often used in batch processing scenarios, but which can also be used as a source of streaming data.
+
+##### Apache Kafka: 
+An open-source data ingestion solution that is commonly used together with Apache Spark. You can use Azure HDInsight to create a Kafka cluster.

@@ -103,3 +103,11 @@ A distributed processing framework for large scale data analytics. You can use S
 ##### Azure Synapse Analytics
 ##### Azure Databricks
 ##### Azure HDInsight
+
+##### Delta Lake
+
+An open-source storage layer that adds support for transactional consistency, schema enforcement, and other common data warehousing features to data lake storage. 
+
+Also unifies storage for streaming and batch data, and can be used in Spark to define relational tables for both batch and stream processing. 
+
+When used for stream processing, a Delta Lake table can be used as a streaming source for queries against real-time data, or as a sink to which a stream of data is written.

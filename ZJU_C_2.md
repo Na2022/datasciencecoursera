@@ -202,11 +202,8 @@ int main()
 {
     int x, i=0;
     const int number = 10;
-    int count[number];
-    for(i=0;i<number;i++)
-    {
-        count[i] = 0;
-    }
+    int count[number]={0};
+
     scanf("%d",&x);
     while(x != -1)
     {

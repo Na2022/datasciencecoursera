@@ -133,5 +133,9 @@ a file store, usually on a distributed file system for high performance data acc
 On Azure, there are three main services that you can use to implement a large-scale analytical store
 
 Azure Synapse Analytics
+
 Azure Databricks
+
 Azure HDInsight
+
+

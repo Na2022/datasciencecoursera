@@ -1,4 +1,5 @@
-***data type, Logic, conditions, etc.***
+data type
+===
 
 #各数据类型的大小
 ```
@@ -156,7 +157,8 @@ int main()
 }
 ```
 
-***数组***
+数组
+===
 
 #读入一个以-1结尾的数组，输出平均值及所有大于平均值的数字
 ```
@@ -187,6 +189,33 @@ int main()
                 printf("%d\n",number[i]);
             }
         }
+    }
+}
+
+```
+
+#输入数量不确定的[0,9]范围内的整数，统计每一种数字出现的次数，输入-1表示结束
+```
+#include <stdio.h>
+
+int main()
+{
+    int x, i=0;
+    const int number = 10;
+    int count[number];
+    for(i=0;i<number;i++)
+    {
+        count[i] = 0;
+    }
+    scanf("%d",&x);
+    while(x != -1)
+    {
+        count[x]++;
+        scanf("%d",&x);
+    }
+    for(i=0;i<number;i++)
+    {
+        printf("%d:%d\n",i,count[i]);
     }
 }
 

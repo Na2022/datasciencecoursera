@@ -69,7 +69,7 @@ offers greater throughput, but is charged at a higher rate.
 a NoSQL storage solution that makes use of tables containing key/value data items. 
 Each item is represented by a row that contains columns for the data fields that need to be stored.
 
-### Batch and stream processing
+
 
 ### Real-time analytics in Azure
 Microsoft Azure supports multiple technologies that you can use to implement real-time analytics of streaming data, including:
@@ -80,7 +80,8 @@ A platform-as-a-service (PaaS) solution that you can use to define streaming job
 ##### Spark Structured Streaming: 
 An open-source library that enables you to develop complex streaming solutions on Apache Spark based services, including Azure Synapse Analytics, Azure Databricks, and Azure HDInsight.
 
-##### Azure Data Explorer: A high-performance database and analytics service that is optimized for ingesting and querying batch or streaming data with a time-series element, and which can be used as a standalone Azure service or as an Azure Synapse Data Explorer runtime in an Azure Synapse Analytics workspace.
+##### Azure Data Explorer:
+A high-performance database and analytics service that is optimized for ingesting and querying batch or streaming data with a time-series element, and which can be used as a standalone Azure service or as an Azure Synapse Data Explorer runtime in an Azure Synapse Analytics workspace.
 
 
 #### Sources for stream processing
@@ -96,3 +97,9 @@ A highly scalable storage service that is often used in batch processing scenari
 
 ##### Apache Kafka: 
 An open-source data ingestion solution that is commonly used together with Apache Spark. You can use Azure HDInsight to create a Kafka cluster.
+
+### Apache Spark
+A distributed processing framework for large scale data analytics. You can use Spark on Microsoft Azure in the following services:
+##### Azure Synapse Analytics
+##### Azure Databricks
+##### Azure HDInsight

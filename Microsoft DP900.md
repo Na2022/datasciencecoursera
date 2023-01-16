@@ -63,3 +63,17 @@ uses hard disk-based hardware in a datacenter
 
 uses solid-state disks
 offers greater throughput, but is charged at a higher rate.
+
+### Azure Table Storage 
+
+a NoSQL storage solution that makes use of tables containing key/value data items. 
+Each item is represented by a row that contains columns for the data fields that need to be stored.
+
+### Batch and stream processing
+
+### Azure Stream Analytics
+
+### Spark Structured Streaming on Azure
+
+### Azure Synapse Data Explorer
+

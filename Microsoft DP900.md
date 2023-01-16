@@ -82,7 +82,6 @@ An open-source library that enables you to develop complex streaming solutions o
 
 ##### Azure Data Explorer: A high-performance database and analytics service that is optimized for ingesting and querying batch or streaming data with a time-series element, and which can be used as a standalone Azure service or as an Azure Synapse Data Explorer runtime in an Azure Synapse Analytics workspace.
 
-### Spark Structured Streaming on Azure
 
 #### Sources for stream processing
 

@@ -38,3 +38,17 @@ has lower performance and incurs reduced storage charges compared to the Hot tie
 ##### The Archive tier
 
 provides the lowest storage cost, but with increased latency. The Archive tier is intended for historical data that mustn't be lost, but is required only rarely. Blobs in the Archive tier are effectively stored in an offline state. Typical reading latency for the Hot and Cool tiers is a few milliseconds, but for the Archive tier, it can take hours for the data to become available. To retrieve a blob from the Archive tier, you must change the access tier to Hot or Cool. The blob will then be rehydrated. You can read the blob only when the rehydration process is complete.
+
+Azure File Storage offers two performance tiers. The Standard tier uses hard disk-based hardware in a datacenter, and the Premium tier uses solid-state disks. The Premium tier offers greater throughput, but is charged at a higher rate.
+
+### Azure Files 
+
+supports two common network file sharing protocols:
+
+#### Server Message Block (SMB) file sharing 
+
+commonly used across multiple operating systems (Windows, Linux, macOS).
+
+#### Network File System (NFS) shares 
+
+used by some Linux and macOS versions. To create an NFS share, you must use a premium tier storage account and create and configure a virtual network through which access to the share can be controlled.

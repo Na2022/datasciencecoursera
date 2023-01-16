@@ -114,3 +114,11 @@ When used for stream processing, a Delta Lake table can be used as a streaming s
 
 ### Azure Data Explorer
 a standalone Azure service for efficiently analyzing data.
+
+### Data warehouse
+
+#### Architecture
+Data ingestion and processing (ETL...)
+Analytical data store
+Analytical data model
+Data visualization

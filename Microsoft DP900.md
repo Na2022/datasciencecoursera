@@ -115,10 +115,23 @@ When used for stream processing, a Delta Lake table can be used as a streaming s
 ### Azure Data Explorer
 a standalone Azure service for efficiently analyzing data.
 
-### Data warehouse
+### Data warehousing
 
 #### Architecture
 Data ingestion and processing (ETL...)
 Analytical data store
 Analytical data model
 Data visualization
+
+#### Data warehouse
+A relational database in which the data is stored in a schema that is optimized for data analytics rather than transactional workloads.
+
+#### Data lake
+a file store, usually on a distributed file system for high performance data access.
+
+#### Azure services for analytical stores
+On Azure, there are three main services that you can use to implement a large-scale analytical store
+
+Azure Synapse Analytics
+Azure Databricks
+Azure HDInsight

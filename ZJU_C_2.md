@@ -217,3 +217,41 @@ int main()
 }
 
 ```
+#输入正整数key，找出key在数组a中的位置，如找不到则返回-1
+key：要寻找的数字
+a：作为寻找范围的数组
+length：数组a的长度
+```
+#include <stdio.h>
+
+int search(int key, int a[],int length)
+{
+    int ret = -1;
+    int i;
+    for(i=0;i<length;i++)
+    {
+        if(a[i] == key)
+        {
+            ret = i;
+            break;
+        }
+    }
+    return ret;
+}
+
+int main()
+{
+    int a[]={2,4,6,8,10,12,14,16,18,20,22,24,26,28,30};
+    int x;
+    int loc;
+    printf("Enter the key:\n");
+    scanf("%d",&x);
+    loc = search(x,a,sizeof(a)/sizeof(a[0]));
+    printf("x=%d loc=%d\n",x,loc);
+    if(loc != -1)
+    {
+        printf("%d在第%d个位置上",x,loc);
+    }
+    else printf("%d不存在当前数组中",x);
+}
+```

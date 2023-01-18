@@ -260,7 +260,7 @@ int main()
 令x为2，
 将2x、3x、4x直至ax<n的数标记为非素数，
 零x为下一个没有被标记为非素数的数，重复上一步直至所有书都已经尝试完毕。
-
+```
 #include <stdio.h>
 #include <math.h>
 

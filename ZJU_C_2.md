@@ -260,5 +260,45 @@ int main()
 令x为2，
 将2x、3x、4x直至ax<n的数标记为非素数，
 零x为下一个没有被标记为非素数的数，重复上一步直至所有书都已经尝试完毕。
-```
+
+#include <stdio.h>
+#include <math.h>
+
+int IsPrime(int x,int knownPrimes[],int numberofKnownPrimes)
+{
+    int i, Prime = 1;
+    for(i=0;i<numberofKnownPrimes;i++)
+    {
+        if(x%knownPrimes[i]==0)
+        {
+            Prime=0;
+            break;
+        }
+    }
+    return Prime;
+}
+
+int main()
+{
+    const int number =100;
+    int prime[number];
+    prime[0]=2;
+    int count =1;
+    int i=3;
+    while(count<number)
+    {
+        if(IsPrime(i,prime,count))
+        {
+            prime[count++]=i;
+        }
+        i++;
+    }
+    for(i=0;i<number;i++)
+    {
+        printf("%d",prime[i]);
+        if((i+1)%5) printf("\t");
+        else printf("\n");
+    }
+    return 0;
+}
 ```

@@ -56,7 +56,7 @@ void swap(int *pa,int *pb)
 
 ### Get an array of integers, print min and max of the array
 
-*** 如何实现不给定数组长度、仅以0结尾？
+***如何实现不给定数组长度、仅以0结尾？
 
 ```
 #include <stdio.h>

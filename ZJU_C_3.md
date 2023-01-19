@@ -1,7 +1,9 @@
 Pointer
 ===
 
-# Definition of pointers
+
+### Definition of pointers
+
 ```
 #include <stdio.h>
 

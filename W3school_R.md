@@ -30,4 +30,16 @@ y <- 5.0
 class(y)
 z <- as.integer(y)
 class(z)
+
+ceiling(1.4)
+floor(1.5)
+
+str <- "Lorem ipsum dolor sit amet"
+str2 <- "Le Roid de Monde"
+cat(str)
+nchar(str)
+grepl("ip",str)
+paste(str, str2)
+str3 <- "We are the so-called \"Vikings\", from the north"
+cat(str3)
 ```

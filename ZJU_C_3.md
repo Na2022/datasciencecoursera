@@ -57,6 +57,16 @@ void swap(int *pa,int *pb)
 ### Get an array of integers, print min and max of the array
 
 #### 如何实现不给定数组长度、仅以0结尾？
+```
+for(p=ac;*p!=-1;)
+{
+    while(*p!=-1)
+    {
+        printf("%d\n",*p++);
+//*的优先级低于++
+    }
+}
+```
 
 ```
 #include <stdio.h>
@@ -93,6 +103,7 @@ p和i的值都可以更改，但不能实现通过*p更改i的值
 指针的指向不能修改
 
 ### 指针运算
+当给指针+1时，是加上了一个指针类型的size
 ```
 #include <stdio.h>
 
@@ -111,18 +122,8 @@ int main()
 ```
 #### 输出结果：
 ```
-#include <stdio.h>
-
-int main()
-{
-    char ac[]={0,1,2,3,4,5,6,7,8,9,};
-    char *p=ac;
-    printf("p=%p\n",p);
-    printf("p+1=%p\n",p+1);
-    
-    int ad[]={0,1,2,3,4,5,6,7,8,9,};
-    int *q=ad;
-    printf("q=%p\n",q);
-    printf("q+1=%p\n",q+1);
-}
+p=0x7ffd08ed26ae
+p+1=0x7ffd08ed26af
+q=0x7ffd08ed2680
+q+1=0x7ffd08ed2684
 ```

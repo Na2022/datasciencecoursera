@@ -91,3 +91,38 @@ void maxmin(int a[],int len,int *max, int *min)
 p和i的值都可以更改，但不能实现通过*p更改i的值
 #### int *const p = &i
 指针的指向不能修改
+
+### 指针运算
+```
+#include <stdio.h>
+
+int main()
+{
+    char ac[]={0,1,2,3,4,5,6,7,8,9,};
+    char *p=ac;
+    printf("p=%p\n",p);
+    printf("p+1=%p\n",p+1);
+    
+    int ad[]={0,1,2,3,4,5,6,7,8,9,};
+    int *q=ad;
+    printf("q=%p\n",q);
+    printf("q+1=%p\n",q+1);
+}
+```
+#### 输出结果：
+```
+#include <stdio.h>
+
+int main()
+{
+    char ac[]={0,1,2,3,4,5,6,7,8,9,};
+    char *p=ac;
+    printf("p=%p\n",p);
+    printf("p+1=%p\n",p+1);
+    
+    int ad[]={0,1,2,3,4,5,6,7,8,9,};
+    int *q=ad;
+    printf("q=%p\n",q);
+    printf("q+1=%p\n",q+1);
+}
+```

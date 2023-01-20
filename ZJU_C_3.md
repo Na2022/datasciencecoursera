@@ -86,3 +86,8 @@ void maxmin(int a[],int len,int *max, int *min)
     }
 }
 ```
+#### const int *p = &i
+#### int const* p = &i
+p和i的值都可以更改，但不能实现通过*p更改i的值
+#### int *const p = &i
+指针的指向不能修改

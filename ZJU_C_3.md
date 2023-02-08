@@ -133,6 +133,24 @@ q+1=0x7ffd08ed2684
 String
 ===
 
+#### int putchar(int c)向标准输出写一个字符
+#### int getchar(void)从标准输入读入一个字符
+
+```
+#include <stdio.h>
+
+int main(int argc, char const *argv[])
+{
+    int ch;
+    while((ch = getchar()) != EOF)
+    {
+        putchar(ch);
+    }
+    printf("EOF\n");
+}
+
+```
+
 
 ### malloc 动态内存分配
 

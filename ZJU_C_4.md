@@ -6,14 +6,25 @@ enum 枚举类型名字{名字0，……，名字n}；
 
 Structure
 ===
+结构的成员不必是同类型
+
+可以对整个结构做赋值、取地址、传递给函数参数
+```
+p1=(struct point){5,10};
+相当于p1.x=5;p1.y=10.
+```
 
 ```
-struct point{
-int x;
-int y;
-};
-struct point p1, p2;
+p1=(struct point){5,10};
+相当于p1.x=5;p1.y=10.
 ```
+
+定义结构
+```
+p1=p2;
+相当于p1.x=p2.x;p1.y=p2.y;
+```
+
 或者定义两个结构：
 ```
 struct{

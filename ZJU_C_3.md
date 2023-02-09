@@ -202,5 +202,22 @@ Enumerate枚举
 enum 枚举类型名字{名字0，……，名字n}；
 
 
+Structure
+===
+
+```
+struct point{
+int x;
+int y;
+};
+struct point p1, p2;
+```
+或者定义两个结构：
+```
+struct{
+int x;
+int y;
+}p1,p2;
+```
 
 

@@ -150,7 +150,8 @@ int main(int argc, char const *argv[])
 }
 
 ```
-#### int strcmp(char *s1,char *s2)
+#### int strcmp(char *s1,char *s2)比较两个字符串长度
+
 ```
 #include <stdio.h>
 #include <string.h>
@@ -174,6 +175,7 @@ int main(int argc, char const *argv[])
     printf("%d\n",'a'-'A');
 }
 ```
+
 #### int strlen
 
 ### malloc 动态内存分配

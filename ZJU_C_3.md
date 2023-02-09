@@ -186,8 +186,20 @@ strcpy(dst,src)
 ```
 
 #### strcat连接字符串
+
 #### char *strchr(const char *s, int c)从左开始搜索字符串
+
 #### char *strrchr(const char *s, int c)从右开始搜索字符串
+
+#### 字符串中寻找字符串
+strstr
+strcasestr
+
+
+Enumerate枚举
+===
+用户定义的数据类型，关键字enum
+enum 枚举类型名字{名字0，……，名字n}；
 
 
 

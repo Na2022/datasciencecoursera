@@ -132,7 +132,7 @@ q+1=0x7ffd08ed2684
 
 String
 ===
-
+### malloc 动态内存分配
 #### int putchar(int c)向标准输出写一个字符
 #### int getchar(void)从标准输入读入一个字符
 
@@ -150,6 +150,9 @@ int main(int argc, char const *argv[])
 }
 
 ```
+
+#### int strlen
+
 #### int strcmp(char *s1,char *s2)比较两个字符串长度
 
 ```
@@ -176,8 +179,16 @@ int main(int argc, char const *argv[])
 }
 ```
 
-#### int strlen
+#### char* strcpy(char *restrict dst, const char *restrict src)把src的字符串拷贝到dst，restrict表明src和dst不重叠（C99），返回dst；第一个参数不是const
+```
+char *dst = (char*)malloc(strlen(src)+1);
+strcpy(dst,src)
+```
 
-### malloc 动态内存分配
+#### strcat连接字符串
+#### char *strchr(const char *s, int c)从左开始搜索字符串
+#### char *strrchr(const char *s, int c)从右开始搜索字符串
+
+
 
 

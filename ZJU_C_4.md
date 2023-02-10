@@ -73,3 +73,21 @@ int main(int argc, char const *argv[])
     printf("This month is %i-%i-%i.\n",thismonth.year,thismonth.month,thismonth.day);
 }
 ```
+
+```
+struct date{
+int month;
+int day;
+int year;
+}myday;
+
+struct date *p = &myday;
+(*p).month = 12;
+p->month = 12;
+```
+#### 自定义数据类型
+
+Length就是int的别名
+```
+typedef int Lenth;
+```

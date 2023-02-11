@@ -187,4 +187,19 @@ int main(int argc, char const *argv[])
 输出结果：
 18.849556
 
+#### 宏可以带参数
+```
+#include <stdio.h>#include <string.h>
+
+#define cube(x) ((x)*(x)*(x))
+int main(int argc, char const *argv[])
+{
+    printf("%d\n",cube(5));
+    return 0;
+}
+```
+
+```
+#define MIN(a,b) ((a)>(b)?(b)>(a))
+```
 

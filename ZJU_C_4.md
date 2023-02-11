@@ -201,5 +201,6 @@ int main(int argc, char const *argv[])
 
 ```
 #define MIN(a,b) ((a)>(b)?(b)>(a))
+//定义的末尾不要加分号！
 ```
 

@@ -164,3 +164,20 @@ int f(void)
 返回在函数内malloc的内存是安全的，但容易造成问题
 
 最好的做法是返回传入的指针
+
+编译预处理和宏
+===
+```
+#include <stdio.h>#include <string.h>
+
+#define FORMAT "%f\n"
+
+int main(int argc, char const *argv[])
+{
+    printf(FORMAT,2*3.1415926*3.0);
+    
+    return 0;
+}
+```
+输出结果：
+18.849556

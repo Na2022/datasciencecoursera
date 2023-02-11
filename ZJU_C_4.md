@@ -116,3 +116,48 @@ int main(int argc, char const *argv[])
     return 0;
 }
 ```
+
+static静态本地变量
+===
+
+#### 实际上是特殊的全局变量，位于相同的内存区域，具有全局的生存期
+```
+#include <stdio.h>
+#include <string.h>
+
+int f(void);
+
+int gAll = 12;
+
+int main(int argc, char const *argv[])
+{
+    f();
+    f();
+    f();
+    return 0;
+}
+
+int f(void)
+{
+    int k = 0;
+    
+    //这里加static和不加是有区别的
+    static int all  = 1;
+    
+    printf("&gAll=%p\n",&gAll);
+    printf("&all=%p\n",&all);
+    printf("&k=%p\n",&k);
+    
+    printf("in f all  = %d\n",all);
+    all += 2;
+    printf("agn in f all = %d\n",all);
+    
+    return all;
+}
+```
+
+#### 返回指针的函数
+返回本地变量的地址是危险的
+返回全局变量或静态本地变量的地址是安全的
+返回在函数内malloc的内存是安全的，但容易造成问题
+最好的做法是返回传入的指针

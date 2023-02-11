@@ -167,6 +167,11 @@ int f(void)
 
 编译预处理和宏
 ===
+
+#define
+
+是完全的文本替换
+
 ```
 #include <stdio.h>#include <string.h>
 
@@ -181,3 +186,5 @@ int main(int argc, char const *argv[])
 ```
 输出结果：
 18.849556
+
+
